@@ -4,4 +4,10 @@
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
     </style>
+    <style name="regularTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@assets/font/Quicksand-Regular</item>
+    </style>
+    <style name="boldTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@assets/font/Quicksand-Bold</item>
+    </style>
 </resources>

@@ -42,11 +42,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Register"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:layout_marginEnd="60dp"
             android:textStyle="bold"
             android:layout_centerInParent="true"
             style="@style/boldTextStyle"
+            android:textColor="@color/text_black"
             android:background="@drawable/underline"/>
 
         <TextView
@@ -54,10 +55,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Login"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:layout_toEndOf="@id/register"
             android:layout_centerVertical="true"
+            android:textColor="@color/text_black"
             android:layout_marginStart="60dp"
             style="@style/boldTextStyle"
             android:background="@drawable/underline"
@@ -70,7 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="460dp"
         app:cardCornerRadius="8dp"
-        app:cardElevation="0dp"
+        app:cardElevation="1dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +96,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="Name"
-                app:labelTextSize="18sp"
+                app:labelTextSize="16sp"
                 android:paddingTop="16dp"/>
 
             <EditText
@@ -107,14 +109,14 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:padding="5dp"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <com.example.flavorfleet.TextInputLabel
                 android:id="@+id/address_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="Address"
-                app:labelTextSize="18sp" />
+                app:labelTextSize="16sp" />
 
             <EditText
                 android:id="@+id/edit_address"
@@ -126,14 +128,14 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:padding="5dp"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <com.example.flavorfleet.TextInputLabel
                 android:id="@+id/email_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="Email"
-                app:labelTextSize="18sp" />
+                app:labelTextSize="16sp" />
 
             <EditText
                 android:id="@+id/edit_email"
@@ -145,14 +147,14 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:padding="5dp"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <com.example.flavorfleet.TextInputLabel
                 android:id="@+id/edit_phone_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="Phone number"
-                app:labelTextSize="18sp" />
+                app:labelTextSize="16sp" />
 
             <EditText
                 android:id="@+id/edit_phone_number"
@@ -164,14 +166,14 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:padding="5dp"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <com.example.flavorfleet.TextInputLabel
                 android:id="@+id/password_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="Password"
-                app:labelTextSize="18sp" />
+                app:labelTextSize="16sp" />
 
             <EditText
                 android:id="@+id/edit_password"
@@ -183,13 +185,13 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:padding="5dp"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
             <com.example.flavorfleet.TextInputLabel
                 android:id="@+id/confirm_password_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="Password Confirmation"
-                app:labelTextSize="18sp" />
+                app:labelTextSize="16sp" />
 
             <EditText
                 android:id="@+id/edit_confirm_password"
@@ -201,7 +203,7 @@
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:padding="5dp"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/register_button"
@@ -214,7 +216,7 @@
                 android:minHeight="48dp"
                 android:text="Register"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <RelativeLayout

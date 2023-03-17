@@ -5,7 +5,8 @@
     <color name="red">#DF2C2C</color>
     <color name="green">#99EA97</color>
     <color name="grey">#9A9A9D</color>
-    <color name="black">#0D0D0D</color>
+    <color name="black">#0C0A0A</color>
+    <color name="text_black">#242424</color>
     <color name="white">#FFFFFFFF</color>
     <color name="primary">#FF9585</color>
     <color name="secondary">#CFCFDE</color>

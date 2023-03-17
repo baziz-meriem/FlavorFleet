@@ -4,15 +4,261 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#F2F2F2"
+    tools:context=".MainActivity"
+    tools:ignore="NamespaceTypo">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="0dp">
 
-    <TextView
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:src="@drawable/user" />
+
+
+
+    </RelativeLayout>
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textSize="20sp"
+            android:layout_marginEnd="60dp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            style="@style/boldTextStyle"
+            android:background="@drawable/underline"/>
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/register"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="60dp"
+            style="@style/boldTextStyle"
+            android:background="@drawable/underline"
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="8dp">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="409dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <com.example.flavorfleet.TextInputLabel
+                android:id="@+id/name_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:labelText="Name"
+                app:labelTextSize="18sp" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                style="@style/regularTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey"
+                android:hint="Enter your name"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:textSize="16sp" />
+
+            <com.example.flavorfleet.TextInputLabel
+                android:id="@+id/address_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:labelText="Address"
+                app:labelTextSize="18sp" />
+
+            <EditText
+                android:id="@+id/edit_address"
+                style="@style/regularTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey"
+                android:hint="Enter your address"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:textSize="16sp" />
+
+            <com.example.flavorfleet.TextInputLabel
+                android:id="@+id/email_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:labelText="Email"
+                app:labelTextSize="18sp" />
+
+            <EditText
+                android:id="@+id/edit_email"
+                style="@style/regularTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey"
+                android:hint="Enter your email"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:textSize="16sp" />
+
+            <com.example.flavorfleet.TextInputLabel
+                android:id="@+id/edit_phone_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:labelText="Phone number"
+                app:labelTextSize="18sp" />
+
+            <EditText
+                android:id="@+id/edit_phone_number"
+                style="@style/regularTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey"
+                android:hint="Enter your phone number"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:textSize="16sp" />
+
+            <com.example.flavorfleet.TextInputLabel
+                android:id="@+id/password_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:labelText="Password"
+                app:labelTextSize="18sp" />
+
+            <EditText
+                android:id="@+id/edit_password"
+                style="@style/regularTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey"
+                android:hint="Enter your password"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:textSize="16sp" />
+            <com.example.flavorfleet.TextInputLabel
+                android:id="@+id/confirm_password_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:labelText="Password Confirmation"
+                app:labelTextSize="18sp" />
+
+            <EditText
+                android:id="@+id/edit_confirm_password"
+                style="@style/regularTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey"
+                android:hint="Confirm your password"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/register_button"
+                style="@style/boldTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6sp"
+                android:background="@drawable/rounded_button"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:text="Register"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already have account ? Login now"
+                    android:textColor="@color/primary"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/myImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/or"
+                android:paddingTop="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/google"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/google"
+                    android:contentDescription="google"
+                    />
+
+                <ImageView
+                    android:id="@+id/facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/facebook"
+                    android:contentDescription="facebook" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

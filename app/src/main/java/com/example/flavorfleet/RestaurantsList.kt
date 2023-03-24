@@ -3,6 +3,7 @@ package com.example.flavorfleet
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -15,6 +16,18 @@ class RestaurantsList : AppCompatActivity() {
        /* val customFont = Typeface.createFromAsset(this.assets, "fonts/Arvo-BoldItalic.ttf")
         val myTextView = findViewById<TextView>(R.id.welcome)
         myTextView.typeface = customFont*/
+        val restaurantsList: List<String> = listOf(
+            " Chin Restau",
+            "NiHao",
+            "JIANGSU",
+            "Mvstic Hill",
+            "KFC",
+            "Mc Donald's",
+            "JIANGSU",
+            "Mvstic Hill",
+            "KFC",
+            "Mc Donald's",
+        )
         val cuisineList: List<String> = listOf(
             "Chinese",
             "Japense",
@@ -33,5 +46,12 @@ class RestaurantsList : AppCompatActivity() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
+
+        val RestaurantRecyclerView = findViewById<RecyclerView>(R.id.restaurant)
+        val Restaurantadapter = RestaurantsAdapter(restaurantsList)
+        val layoutManager = GridLayoutManager(this, 2)
+
+        RestaurantRecyclerView.adapter = Restaurantadapter
+        RestaurantRecyclerView.layoutManager = layoutManager
     }
 }

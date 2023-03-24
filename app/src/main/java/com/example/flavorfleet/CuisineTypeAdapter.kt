@@ -21,7 +21,7 @@ class CuisineTypeAdapter(private val context: RestaurantsList, private val cuisi
         return ViewHolder(view)
     }
 
-    @SuppressLint("ResourceAsColor")
+    @SuppressLint("ResourceAsColor", "SuspiciousIndentation")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val customTypeface = Typeface.createFromAsset(context.assets, "fonts/Quicksand-Medium.ttf")
         holder.cuisineTypeTextView.text = cuisineTypes[position]

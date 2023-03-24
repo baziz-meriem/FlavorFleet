@@ -18,7 +18,7 @@ class TextInputLabel @JvmOverloads constructor(
         ).apply {
             try {
                 val labelText = getString(R.styleable.TextInputLabel_labelText)
-                val labelTextColor = getColor(R.styleable.TextInputLabel_labelTextColor,Color.BLACK )
+                val labelTextColor = getColor(R.styleable.TextInputLabel_labelTextColor,Color.DKGRAY )
                 val labelTextSize = getDimension(R.styleable.TextInputLabel_labelTextSize, 16f)
 
                 text = labelText

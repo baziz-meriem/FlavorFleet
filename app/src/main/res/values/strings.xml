@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FlavorFleet</string>
+    <string name="login">Login</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="facebook">facebook</string>
+    <string name="already_have_account_login_now">Already have account ? Login now</string>
+    <string name="confirm_your_password">Confirm your password</string>
 </resources>

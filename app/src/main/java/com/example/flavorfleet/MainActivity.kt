@@ -1,8 +1,9 @@
 package com.example.flavorfleet
 
-import android.graphics.Typeface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 
 
@@ -11,11 +12,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       // val textView = findViewById<TextView>(R.id.name_label)
+        val loginPage = View.OnClickListener {
+            val intent = Intent(this@MainActivity, LoginActivity::class.java)
+            startActivity(intent)
+        }
+        val logtextView: TextView = findViewById(R.id.login)
+        val logtextViewsm: TextView = findViewById(R.id.text_login)
 
-// Set the font family
-        //val typeface = Typeface.createFromAsset(assets, "fonts/Quicksand-Bold.xml")
+        logtextView.setOnClickListener(loginPage)
+        logtextViewsm.setOnClickListener(loginPage)
 
-       // textView.typeface = typeface
+
+
+
     }
 }

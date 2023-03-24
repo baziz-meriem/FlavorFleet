@@ -15,8 +15,13 @@ class RestaurantsList : AppCompatActivity() {
        /* val customFont = Typeface.createFromAsset(this.assets, "fonts/Arvo-BoldItalic.ttf")
         val myTextView = findViewById<TextView>(R.id.welcome)
         myTextView.typeface = customFont*/
-        val cuisineList = listOf(
+        val cuisineList: List<String> = listOf(
             "Chinese",
+            "Japense",
+            "Kabyle",
+            "Arabian",
+            "American",
+            "Canadian",
             "Japense",
             "Kabyle",
             "Arabian",
@@ -24,7 +29,7 @@ class RestaurantsList : AppCompatActivity() {
             "Canadian"
         )
         val recyclerView = findViewById<RecyclerView>(R.id.cuisineType)
-        val adapter = CuisineTypeAdapter(cuisineList)
+        val adapter = CuisineTypeAdapter(this,cuisineList)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 

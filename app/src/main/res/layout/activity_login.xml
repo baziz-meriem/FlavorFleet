@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    tools:context=".MainActivity"
+    tools:ignore="NamespaceTypo">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="0dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:src="@drawable/logo_small"
+                tools:ignore="ImageContrastCheck"
+                android:contentDescription="logo" />
+
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/login"
+                style="@style/boldTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="60dp"
+                android:text="Login"
+                android:background="@drawable/underline"
+                android:textColor="@color/text_black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+            <TextView
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textSize="20sp"
+                android:layout_toEndOf="@id/login"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text_black"
+                android:layout_marginStart="60dp"
+                style="@style/boldTextStyle"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="0dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="409dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                >
+
+                <com.example.flavorfleet.TextInputLabel
+                    android:id="@+id/email_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="Email"
+                    app:labelTextSize="16sp"
+                    android:paddingTop="16dp"/>
+
+                <EditText
+                    android:id="@+id/edit_email"
+                    style="@style/regularTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/grey"
+                    android:hint="Enter your email"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:padding="5dp"
+                    android:textSize="14sp" />
+
+                <com.example.flavorfleet.TextInputLabel
+                    android:id="@+id/edit_phone_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="Phone number"
+                    app:labelTextSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edit_phone_number"
+                    style="@style/regularTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/grey"
+                    android:hint="@string/enter_your_phone_number"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:padding="5dp"
+                    android:textSize="14sp" />
+
+                <com.example.flavorfleet.TextInputLabel
+                    android:id="@+id/password_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:labelText="Password"
+                    app:labelTextSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edit_password"
+                    style="@style/regularTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/grey"
+                    android:hint="Enter your password"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:padding="5dp"
+                    android:textSize="14sp"
+                    android:paddingBottom="30dp"/>
+
+
+                <Button
+                    android:id="@+id/login_button"
+                    style="@style/boldTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6sp"
+                    android:background="@drawable/rounded_button"
+                    android:gravity="center"
+                    android:minHeight="48dp"
+                    android:text="Login"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/text_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/already_have_account_login_now"
+                        android:textColor="@color/primary"
+                        android:textSize="12sp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_centerInParent="true"
+                        android:paddingTop="14dp"
+                        />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/myImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/or"
+                    android:paddingTop="16dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/google"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/google"
+                        android:contentDescription="google"
+                        />
+
+                    <ImageView
+                        android:id="@+id/facebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/facebook"
+                        android:contentDescription="@string/facebook" />
+
+                </LinearLayout>
+            </LinearLayout>
+    </ScrollView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

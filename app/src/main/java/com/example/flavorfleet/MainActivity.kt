@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val loginPage = View.OnClickListener {
-            val intent = Intent(this@MainActivity, LoginActivity::class.java)
+            val intent = Intent(this@MainActivity, RestaurantsList::class.java)
             startActivity(intent)
         }
         val logtextView: TextView = findViewById(R.id.login)

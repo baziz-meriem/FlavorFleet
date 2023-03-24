@@ -26,7 +26,7 @@ class TextInputLabel @JvmOverloads constructor(
                 textSize = labelTextSize / resources.displayMetrics.density
                 typeface = Typeface.createFromAsset(
                     context.assets,
-                    "font/Quicksand-Bold.ttf"
+                    "fonts/Quicksand-Bold.ttf"
                 )
             } finally {
                 recycle()

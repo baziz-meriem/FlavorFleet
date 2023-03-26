@@ -41,7 +41,7 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="4dp"
             android:drawableStart="@drawable/swipe"
             android:drawablePadding="8dp"
             android:text="swipe on an item to delete "
@@ -68,7 +68,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.361" />
+                app:layout_constraintVertical_bias="0.361"/>
         </RelativeLayout>
 
         <androidx.cardview.widget.CardView

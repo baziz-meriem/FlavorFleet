@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Cart">
+
+        <ImageView
+            android:id="@+id/imageViewTopRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/burger"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Cart"
+            android:textColor="@color/secondary_dark"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageViewTopRight" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:drawableStart="@drawable/swipe"
+            android:drawablePadding="8dp"
+            android:text="swipe on an item to delete "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/orderRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.361" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="40dp"
+            android:padding="4dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="1dp"
+            app:contentPadding="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:padding="4dp"
+                android:paddingBottom="8dp"
+                android:text="Delivery Information"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/delivery_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/grey"
+                android:hint="Enter your address"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="15dp"
+                android:textSize="14sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="1dp"
+            app:contentPaddingTop="14dp"
+            app:contentPaddingBottom="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/payButton"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:layout_constraintVertical_bias="0.33">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="123dp">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/line1"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginBottom="4dp"
+                    android:padding="4dp"
+                    android:text="Order Price"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/order_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="89dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toEndOf="@+id/textView12"
+                    android:padding="4dp"
+                    android:text="15 DA"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/line1"
+                    android:layout_width="311dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/order_price"
+                    android:layout_alignBottom="@+id/order_price"
+                    android:layout_marginEnd="-44dp"
+                    android:layout_marginBottom="0dp"
+                    android:src="@drawable/line_thin" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="71dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/order_price"
+                    android:layout_alignEnd="@+id/order_price"
+                    android:layout_alignBottom="@+id/line2"
+                    android:layout_marginStart="-5dp"
+                    android:layout_marginEnd="-11dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="150 DA"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="71dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView11"
+                    android:layout_alignStart="@+id/textView11"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="12dp"
+                    android:text="150 DA"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="119dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView12"
+                    android:layout_alignEnd="@+id/textView12"
+                    android:layout_alignBottom="@+id/line2"
+                    android:layout_marginStart="-6dp"
+                    android:layout_marginEnd="-16dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Delivery Fees"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="119dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView13"
+                    android:layout_alignStart="@+id/textView13"
+                    android:layout_alignEnd="@+id/textView12"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="-8dp"
+                    android:text="Total Price"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/line2"
+                    android:layout_width="311dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line1"
+                    android:layout_alignStart="@+id/line1"
+                    android:layout_alignEnd="@+id/line1"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="47dp"
+                    android:layout_marginEnd="19dp"
+                    android:src="@drawable/line_thin" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/payButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:text="Complete Order"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

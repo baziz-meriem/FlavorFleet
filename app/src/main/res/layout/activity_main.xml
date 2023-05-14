@@ -56,16 +56,16 @@
 
         <TextView
             android:id="@+id/login"
+            style="@style/boldTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:textSize="20sp"
-            android:layout_toEndOf="@id/register"
             android:layout_centerVertical="true"
-            android:textColor="@color/text_black"
             android:layout_marginStart="60dp"
-            style="@style/boldTextStyle"
-            />
+            android:layout_toEndOf="@id/register"
+            android:minHeight="48dp"
+            android:text="@string/login"
+            android:textColor="@color/text_black"
+            android:textSize="20sp" />
 
     </LinearLayout>
     </LinearLayout>
